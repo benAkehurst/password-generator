@@ -6,3 +6,8 @@ body {
 .newPasswordsDisplay {
 	font-family: 'Slabo 27px', serif;
 }
+
+.strengthChecker {
+	width: 1200px;
+	height: 800px;
+}
