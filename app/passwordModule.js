@@ -8,12 +8,15 @@
 
 	passwordModule.controller("PasswordController", function($scope){
 
+		$scope.options = [{ name: "Eight", id: 1 }, { name: "Ten", id: 2 }, { name: "Twelve", id: 3 }, { name: "Sixteen", id: 4 }];
+
 		$scope.generatePassword = function(){
 
 			// shuffles the array of characters
 			var generatePassword = shuffleArray(arrAllDigits);
 
 			// calls a function that makes the shuffled array only 8 charaters
+
 			var eightCharPassword = eightCharGenerate(arrAllDigits);
 			var tenCharPassword = tenCharGenerate(arrAllDigits);
 			var twelveCharPassword = twelveCharGenerate(arrAllDigits);
@@ -26,7 +29,9 @@
 			$scope.newSixteenCharPassword = sixteenCharPassword.newPassword;
 
 		}
+
 	});
+
 
 	function shuffleArray(all) {
     	for (var i = all.length - 1; i > 0; i--) {
