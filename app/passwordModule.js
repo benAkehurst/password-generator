@@ -15,18 +15,22 @@
 			// shuffles the array of characters
 			var generatePassword = shuffleArray(arrAllDigits);
 
-			// calls a function that makes the shuffled array only 8 charaters
-
-			var eightCharPassword = eightCharGenerate(arrAllDigits);
-			var tenCharPassword = tenCharGenerate(arrAllDigits);
-			var twelveCharPassword = twelveCharGenerate(arrAllDigits);
-			var sixteenCharPassword = sixteenCharGenerate(arrAllDigits);
-
-			// sends the new 8 char password to the view
-			$scope.newEightCharPassword = eightCharPassword.newPassword;
-			$scope.newTenCharPassword = tenCharPassword.newPassword;
-			$scope.newTwelveCharPassword = twelveCharPassword.newPassword;
-			$scope.newSixteenCharPassword = sixteenCharPassword.newPassword;
+			if($scope.selectedNumber.id === 1){
+				var eightCharPassword = eightCharGenerate(arrAllDigits);
+				$scope.newPassword = eightCharPassword.newPassword;
+			}
+			else if($scope.selectedNumber.id === 2){
+				var tenCharPassword = tenCharGenerate(arrAllDigits);
+				$scope.newPassword = tenCharPassword.newPassword;
+			}
+			else if($scope.selectedNumber.id === 3){
+				var twelveCharPassword = twelveCharGenerate(arrAllDigits);
+				$scope.newPassword = twelveCharPassword.newPassword;
+			}
+			else if($scope.selectedNumber.id === 4){
+				var sixteenCharPassword = sixteenCharGenerate(arrAllDigits);
+				$scope.newPassword = sixteenCharPassword.newPassword;
+			}
 
 		}
 
