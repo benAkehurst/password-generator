@@ -1,18 +1,51 @@
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+	background: rgb(211, 219, 237); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left,rgb(211, 219, 237),rgb(9, 57, 165)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right,rgb(211, 219, 237),rgb(9, 57, 165)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right,rgb(211, 219, 237),rgb(9, 57, 165)); /*Fx 3.6-15*/
+	background: linear-gradient(to right,rgb(211, 219, 237),rgb(9, 57, 165)); /*Standard*/
+}
+
+.container {
+	margin-top: 75px;
+	background-color: #b0b4ba;
+	width: 75%;
+	float: none;
+	border-radius: 15px;
+	box-shadow: 10px 10px 5px #5e5e5e;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.header, .options, .results, .selectTitle {
+	color:#f4f4f4;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.app {
+	float: none; margin: 0 auto;
 }
 
 .newPasswordsDisplay {
 	font-family: 'Slabo 27px', serif;
 }
 
-.siteLogo {
-	width: 75px;
-	height: 75px;
+.header, .selectBox, .options, .credits {
+	text-align: center;
+}
+
+.results{
+	text-align: center;
 }
 
 .newPasswordsDisplay {
-	text-decoration: underline;
 	font-weight: bold;
 }
+

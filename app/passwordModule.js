@@ -2,13 +2,13 @@
 
 	"use strict";
 
-	var passwordModule = angular.module("passwordModule", []);
+	var passwordModule = angular.module("passwordModule", ['ngclipboard']);
 	
 	var arrAllDigits = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",0,1,2,3,4,5,6,7,8,9,"_","!","#","$","%","&","+","*","-"];
 
-	passwordModule.controller("PasswordController", function($scope){
+	passwordModule.controller("PasswordController", function($scope, $window){
 
-		$scope.options = [{ name: "Eight", id: 1 }, { name: "Ten", id: 2 }, { name: "Twelve", id: 3 }, { name: "Sixteen", id: 4 }];
+		$scope.options = [{ name: "Eight Charaters", id: 1 }, { name: "Ten Charaters", id: 2 }, { name: "Twelve Charaters", id: 3 }, { name: "Sixteen Charaters", id: 4 }];
 
 		$scope.generatePassword = function(){
 
@@ -33,6 +33,10 @@
 			}
 
 		}
+
+        $scope.redirectToPasswordmeter = function(){
+            $window.open('http://www.passwordmeter.com/', '_blank');
+        }
 
 	});
 
